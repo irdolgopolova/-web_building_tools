@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Datetime superapp</title>
+        <script src="./node_modules/howler/dist/howler.js"></script>
+        <script src="./src/js/main.js" type="module"></script>
+        <link rel="stylesheet" href="src/css/style.css">
+    </head>
+    <body>
+        <div class="tab">
+            <button data-tab="calc" class="tablinks">Калькулятор дат</button>
+            <button data-tab="timer" class="tablinks">Таймер</button>
+        </div>
+
+        <div id="calc" class="tabcontent">
+            <form id="datecalc">
+                <h3>Калькулятор дат</h3>
+                <label>
+                    <strong>Первая дата:</strong>
+                    <input type="date" name="firstDate"/>
+                </label>
+                <label>
+                    <strong>Вторая дата:</strong>
+                    <input type="date" name="secondDate"/>
+                </label>
+                <button type="submit">Расчитать промежуток</button>
+                <p id="datecalc__result"></p>
+            </form>
+        </div>
+
+        <div id="timer" class="tabcontent">
+            <form id="timer_form" class="hidden">
+                <audio id="timer_form__audio" src="./src/media/timer.mp3"></audio>
+                <h3>Таймер</h3>
+                <p>Укажите часы, минуты и секунды</p>
+
+                <div class="timer__input">
+                    <input id="hour" type="number" min="0" max="23" value="0"/>
+                    <span>:</span>
+                    <input id="min" type="number" min="0" max="59" value="0"/>
+                    <span>:</span>
+                    <input id="sec" type="number" min="0" max="50" value="0"/>
+                </div>
+
+                <div class="timer__group_btn"></div>
+                  <button class="timer__start_btn" type="submit">
+                    старт
+                  </button>
+                  <button class="timer__stop_btn" type="reset">
+                    стоп
+                  </button>
+                </div>
+              </form>
+        </div>
+    </body>
+</html>
+
+<script>
+
+</script>
