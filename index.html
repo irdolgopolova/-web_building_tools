@@ -4,9 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Datetime superapp</title>
-        <script src="./node_modules/howler/dist/howler.js"></script>
-        <script src="./src/js/main.js" type="module"></script>
-        <link rel="stylesheet" href="src/css/style.css">
     </head>
     <body>
         <div class="tab">
@@ -31,8 +28,8 @@
         </div>
 
         <div id="timer" class="tabcontent">
+            <img src="./src/assets/img/timer.png" width="100px" alt="Таймер" />
             <form id="timer_form" class="hidden">
-                <audio id="timer_form__audio" src="./src/media/timer.mp3"></audio>
                 <h3>Таймер</h3>
                 <p>Укажите часы, минуты и секунды</p>
 
@@ -45,18 +42,14 @@
                 </div>
 
                 <div class="timer__group_btn"></div>
-                  <button class="timer__start_btn" type="submit">
-                    старт
-                  </button>
-                  <button class="timer__stop_btn" type="reset">
-                    стоп
-                  </button>
+                    <button class="timer__start_btn" type="submit">
+                        старт
+                    </button>
+                    <button class="timer__stop_btn" type="reset">
+                        стоп
+                    </button>
                 </div>
-              </form>
+        </form>
         </div>
     </body>
 </html>
-
-<script>
-
-</script>

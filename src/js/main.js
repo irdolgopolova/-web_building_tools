@@ -2,6 +2,10 @@ import { diffDates, diffToHtml } from "./datecalc.js";
 import { formatError } from "./utils.js";
 import { startTime, stopTime } from "./timer.js";
 import { openTab } from "./tabs.js";
+import './../css/style.css';
+import chunk from "lodash/chunk";
+
+console.log(chunk(["a", "b", "c", "d"]), 2);
 
 const dateCalcForm = document.getElementById("datecalc");
 const dateCalcResult = document.getElementById("datecalc__result");
@@ -30,7 +34,7 @@ timerForm.addEventListener("reset", handleEndTimer);
 
 function handleStartTimer(event) {
     event.preventDefault();
-    
+
     timerId = startTime();
 }
 

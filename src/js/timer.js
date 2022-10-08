@@ -1,3 +1,5 @@
+import { Howl } from 'howler';
+
 const timerForm = document.getElementById("timer_form");
 
 const hourBlock = document.getElementById("hour");
@@ -75,6 +77,10 @@ export function stopTime(timerId) {
     clearInterval(timerId);
     updateTimerBlock(0, 0, 0);
     inputDisabled(false);
-    console.log('timer_form__audio');
-    document.getElementById('timer_form__audio').play();
+
+    let sound = new Howl({
+    src: ['./src/assets/sound/timer.mp3']
+    });
+
+    sound.play();
 }
